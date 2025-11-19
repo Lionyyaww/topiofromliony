@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Pio!</title>
+
+    <!-- Font Aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            background-color: #f7f3f7;
+            color: #444;
+            overflow: hidden;
+        }
+
+        .slider {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 100vw;
+            height: 100vh;
+            padding: 60px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Soft Colors */
+        .s1 { background: #f6e7f7; }
+        .s2 { background: #e8f6f5; }
+        .s3 { background: #fdf3e7; }
+
+        h1 {
+            font-family: "Quicksand", sans-serif;
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            width: 80%;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            border: none;
+            border-radius: 25px;
+            background: #ffffffaa;
+            backdrop-filter: blur(3px);
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffffffdd;
+        }
+
+        .spotify-player {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider" id="slider">
+        <!-- SLIDE 1 -->
+        <div class="slide s1">
+            <h1>Happy Birthdayy, Pio!</h1>
+            <p>Pioooo happy birthdayyy yayyy!! udah tua kah kamuu? wkwkw semohga di umur kamu sekarang bisa jadi pribadi yang lebih baik lagi dan pastinya lebih dewasa.</p>
+            <p>Trus semoga skripsinya lancar yaaa ganteng! Semangat untuk semua hal yang kamu lakuin, Semangatt pokoknyaa!</p>
+            <p>Oh yaa, sebenernya bikin kayak gini biar pio seneng aja sih, walaupun hal sepele tapi semoga pio suka yaa! Soalnya pengen ikut jadi salah satu orang yang ngerayain ulang tahunnya pioo hehehe</p>
+            <p>Sekali lagi, Happy Birthdayy Pioo!</p>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="slide s2">
+            <p>Selamat bertambah usia, Pio! Beberapa tahun lalu—di tanggal yang sama, kamu hadir dalam hiruk pikuk dunia. Kurasa semesta ikut berbahagia saat kamu ada. Entah kamu menyadarinya atau tidak, kamu termasuk dalam salah satu manusia beruntung yang sengaja Tuhan ciptakan dengan segala hal baik di dalamnya.</p>
+
+            <p>Mungkin aku tak mengenalmu cukup lama, namun aku cukup mengenalmu dengan baik. Beribu doa kurapalkan, termasuk bahagia yang kamu dambakan.</p>
+
+            <p>Mungkin dalam hidup dan di beberapa hal merupakan hari yang berat untukmu, namun terima kasih karena berhasil melewatinya. Terima kasih karena telah menjadi orang yang baik bagi orang lain. Kuharap semesta meniadakan segala sedih, luka, amarah yang pernah terjadi di hidupmu, lalu digantikan dengan bahagia tanpa batas.</p>
+
+            <p><b>- Lionyyy</b></p>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="slide s3">
+            <p>Piooo, aku punya beberapa lagu buat pio dan ada juga hadiah kecill di inbox ml, semoga kamu suka! Once again, Happyy birthdayyyy pioo!</p>
+            <p><b>- Lots of love, Liony</b></p>
+
+            <div class="spotify-player">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/55AEbNnF8LDcy81kWScGmu?utm_source=generator" width="300" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <br><br>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4GfK1qOF3uBWidbPlTCQRL?utm_source=generator" width="300" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                <br><br>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0rgEL2cD2T5MDzSDJTQNlw?utm_source=generator" width="300" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <button class="btn" onclick="prev()">← Prev</button>
+        <button class="btn" onclick="next()">Next →</button>
+    </div>
+
+    <script>
+        let current = 0;
+        function updateSlide() {
+            document.getElementById("slider").style.transform = `translateX(-${current * 100}vw)`;
+        }
+        function next() {
+            if (current < 2) current++;
+            updateSlide();
+        }
+        function prev() {
+            if (current > 0) current--;
+            updateSlide();
+        }
+    </script>
+
+</body>
+</html>
